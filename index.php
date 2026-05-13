@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "db_rental_outdoor";
+$db   = "db_eloncamp";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 

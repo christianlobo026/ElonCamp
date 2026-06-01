@@ -225,7 +225,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="total-box">
     <small>Total yang harus ditransfer</small>
     <div class="amount"><?= formatRupiah($total); ?></div>
-    <small style="margin-top:4px;">Sudah termasuk ongkos kirim Rp 25.000</small>
 </div>
 
 <!-- Rekening -->

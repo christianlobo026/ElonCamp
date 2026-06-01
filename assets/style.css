@@ -1,0 +1,142 @@
+/* assets/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700;800&display=swap');
+
+:root {
+    --midnight: #0f172a;    /* Biru Dongker Utama */
+    --slate-800: #1e293b;   /* Biru Dongker Sekunder */
+    --accent-blue: #2563eb; /* Biru Aksen */
+    --text-main: #334155;
+    --text-light: #64748b;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f8fafc; 
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* Tipografi Terinspirasi Sibayak Adventure */
+h1, h2, h3, .logo, .nav-link, .btn-primary { 
+    font-family: 'Montserrat', sans-serif; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Navigasi Bersih */
+nav {
+    background: var(--white);
+    padding: 1rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+nav .logo { 
+    color: var(--midnight); 
+    font-size: 1.25rem; 
+    font-weight: 800; 
+    text-decoration: none; 
+}
+
+nav ul { display: flex; list-style: none; gap: 2rem; }
+nav ul li a { 
+    color: var(--text-main); 
+    text-decoration: none; 
+    font-size: 0.85rem; 
+    font-weight: 600;
+    transition: 0.2s;
+}
+nav ul li a:hover { color: var(--accent-blue); }
+
+.btn-auth {
+    background: var(--midnight);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Hero Section Proporsional */
+.hero {
+    height: 65vh; /* Ukuran tidak terlalu besar */
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+                url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.hero-content p { 
+    font-size: 1rem; 
+    font-family: 'Inter', sans-serif; 
+    text-transform: none; 
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* Katalog Card Modern */
+.container { padding: 60px 8%; }
+.section-title { text-align: center; margin-bottom: 45px; }
+.section-title h2 { font-size: 1.5rem; color: var(--midnight); font-weight: 700; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+.card-img { height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+
+.card-body { padding: 1.25rem; }
+.card-body .cat { font-size: 0.65rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 0.5rem; display: block; }
+.card-body h3 { font-size: 1rem; margin-bottom: 1rem; color: var(--midnight); }
+
+.card-footer { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+}
+.price { font-size: 1rem; font-weight: 700; color: #10b981; }
+.btn-action { 
+    background: var(--midnight); 
+    color: var(--white); 
+    padding: 0.5rem 1rem; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-size: 0.7rem; 
+    font-weight: 700;
+}
+
+/* Footer Minimalis */
+footer {
+    background: var(--midnight);
+    color: var(--white);
+    padding: 60px 8% 30px;
+}
+.footer-text { font-size: 0.85rem; opacity: 0.6; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; }
